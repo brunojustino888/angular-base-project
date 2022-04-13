@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-aula00',
@@ -10,6 +10,8 @@ export class Aula00Component implements OnInit {
   btnClickOk:boolean=false;
 
   valorsalvo:string="";
+
+  @Input() nome:string = ""; 
 
   pessoa:any = {
     idade: 33,
