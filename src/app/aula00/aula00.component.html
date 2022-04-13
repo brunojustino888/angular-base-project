@@ -2,12 +2,15 @@
 
 <section>
     <article>
-        <h3>Aula 00 - Event binding</h3>
+        <h3>Aula 00 - Event binding / ngModel / Two-way Data Binding</h3>
         <div>
             <button #btnClickOk (click)="exibeStatus()" class="btn btn-primary">Clique aqui</button>
             <br />
             <input #valorInput type="text" (keyup)="onTecladoKeyUp($event)" (keydown)="ontecladokeyup(valorInput)" (keyup.enter)="salvar($event)"/>
             <p>Valor Salvo: {{valorsalvo}}</p>
+            <input type="text" [(ngModel)]="pessoa.nome" />
+            <input type="text" [(ngModel)]="pessoa.idade" />
+            <p> Nome: {{pessoa.nome}} >>> Idade: {{pessoa.idade}}</p>
         </div>
         
         

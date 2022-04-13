@@ -11,6 +11,11 @@ export class Aula00Component implements OnInit {
 
   valorsalvo:string="";
 
+  pessoa:any = {
+    idade: 33,
+    nome:"Bruno"
+  }
+
   constructor() { }
 
   ngOnInit(): void {
