@@ -1,0 +1,15 @@
+
+
+<section>
+    <article>
+        <h3>Aula 00 - Event binding</h3>
+        <div>
+            <button #btnClickOk (click)="exibeStatus()" class="btn btn-primary">Clique aqui</button>
+            <br />
+            <input #valorInput type="text" (keyup)="onTecladoKeyUp($event)" (keydown)="ontecladokeyup(valorInput)" (keyup.enter)="salvar($event)"/>
+            <p>Valor Salvo: {{valorsalvo}}</p>
+        </div>
+        
+        
+    </article>
+</section>
