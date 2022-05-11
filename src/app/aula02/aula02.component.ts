@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-aula02',
@@ -7,16 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Aula02Component implements OnInit {
 
+  @ViewChild('contadorFinal') contadorFinal: ElementRef;
+  
+  valorContador:number=0;
+
   constructor() { }
 
-  nomeParent:string ="Teste";
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
+  diminui(){
+    console.log(this.contadorFinal);
+    console.log(this.contadorFinal.nativeElement.value);
+    this.valorContador--;
   }
 
-  aoMudar(evento){
-    console.log(evento);
-    alert(evento.novoValor);
+  aumenta(){
+    console.log(this.contadorFinal);
+    console.log(this.contadorFinal.nativeElement.value);
+    this.valorContador++;
   }
 
 }

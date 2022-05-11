@@ -1,2 +1,16 @@
-<p>aula01 works!</p>
-<app-aula00 [nome]="nomeDoFrameWork"></app-aula00>
+
+
+<section>
+    <article>
+        <h3>{{nome}} Aula 01 - Event binding / ngModel / Two-way Data Binding</h3>
+        <div>
+            <button #btnClickOk (click)="exibeStatus()" class="btn btn-primary">Clique aqui</button>
+            <br />
+            <input #valorInput type="text" (keyup)="onTecladoKeyUp($event)" (keydown)="ontecladokeyup(valorInput)" (keyup.enter)="salvar($event)"/>
+            <p>Valor Salvo: {{valorsalvo}}</p>
+            <p> Nome: {{pessoa.nome}} >>> Idade: {{pessoa.idade}}</p>
+        </div>
+        
+        
+    </article>
+</section>
