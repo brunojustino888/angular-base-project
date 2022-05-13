@@ -1,21 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="/aula00">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/aula01">Aula 01</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/aula02">Aula 02</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<div style="background-image: radial-gradient(circle, white, azure, white); height: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;"> 
 
-<div id="container">
-  <router-outlet></router-outlet>
+  <nav class="navbar navbar-dark bg-primary navbar-expand-lg justify-content-between">
+    <a class="navbar-brand" routerLink="/aula00">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="float: left;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/aula03">Cadastrar pessoa</a>
+        </li>
+      </ul>
+    </div>
+    <div style="float: right;">
+      <form class="form-inline my-2 my-lg-0" >
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div id="container">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
 
